@@ -1,0 +1,11 @@
+# for image size reduction script
+Pillow
+
+# for boilerplate codes of gui and web app
+git+https://github.com/ftnext/bring-script-more-users@master#subdirectory=bringscript&egg=bringscript
+
+# for GUI app
+Eel
+
+# for Web app
+Flask
