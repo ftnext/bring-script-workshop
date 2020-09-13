@@ -27,6 +27,14 @@ After: It will create the gui directory.
 └── target_images
 ```
 
+workaround
+
+```
+mkdir -p gui/web
+touch gui/gui.py
+touch gui/web/hello.html
+```
+
 ### 2. Change gui.py
 
 Before
@@ -45,6 +53,11 @@ from datetime import datetime  # Added
 @eel.expose
 def hello():
     return f"Hello World at {datetime.now()}"
+
+# if you starts from the empty file.
+if __name__ == "__main__":
+    eel.init("web")
+    eel.start("hello.html", size=(600, 400))
 ```
 
 ### 3. Change HTML in hello.html
