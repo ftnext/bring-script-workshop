@@ -19,6 +19,7 @@ git clone https://github.com/ftnext/bring-script-workshop.git
 
 ### 2. Install dependencies
 
+Use what you've always done when setting up your environment.  
 I usually use `venv` module.
 
 ```
@@ -57,3 +58,16 @@ python shrink_image.py
 ```
 
 Check the `images/memories` directory (newly created).
+
+## Main contents
+
+This is a Quick tour from CLI through GUI to Web app.  
+Please see the `cut_in_chase` directory.
+
+The `outcomes` directory holds completed codes in this workshop.
+
+If you have any troubles or questions about this repository, feel free to contact to me(nikkie)
+
+- PyCon APAC Notice Board
+- Creating issue in this repository
+- Twitter [@ftnext](https://twitter.com/ftnext).
