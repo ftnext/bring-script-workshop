@@ -2,7 +2,7 @@ Notice: Work at the repository **root** directory.
 
 ```
 pwd
-cd ..  # if you are in the first_step script directory
+cd ..  # if you are in the gui directory
 ```
 
 ## First example of Flask
@@ -66,6 +66,13 @@ After
   </body>
 ```
 
+### Execution
+
+```
+cd webapp
+python webapp.py 
+```
+
 ## Convert GUI to Web app
 
 Edit `webapp.py` and `templates/hello.html`.
@@ -91,7 +98,7 @@ app = Flask(__name__, static_folder="images")  # Edited
 @app.route("/resize", methods=["GET", "POST"])
 def resize():
     if request.method == "GET":
-        return render_template("resize.html")
+        return render_template("hello.html")
 
     random_id = uuid.uuid4()
     shrinked_dir_path = Path(f"images/{random_id}")
@@ -107,7 +114,7 @@ def resize():
         has_resized = resize_image(image_file, resized_image_path, max_length)
         if has_resized:
             image_paths.append(resized_image_path)
-    return render_template("resize.html", image_paths=image_paths)
+    return render_template("hello.html", image_paths=image_paths)
 ```
 
 ### 2. Edit `templates/hello.html`

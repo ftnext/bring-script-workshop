@@ -2,7 +2,7 @@ Notice: Work at the repository **root** directory.
 
 ```
 pwd
-cd ..  # if you are in the first_step script directory
+cd ..  # if you are in the first_step_script directory
 ```
 
 ## First example of Eel
@@ -90,6 +90,13 @@ After
     </script>
 ```
 
+### Execution
+
+```
+cd gui
+python gui.py 
+```
+
 ## Convert CLI to GUI
 
 Edit `gui.py` and `web/hello.html`.
@@ -118,7 +125,7 @@ def existing_path(path_str):
 # if __name__ == "__main__":  # deleted
 @eel.expose  # Added
 def resize(target_image_path_str, max_length):
-        target_image_path = existing_path(target_image_path_str)
+    target_image_path = existing_path(target_image_path_str)
     if not target_image_path:
         return None
 
@@ -132,7 +139,7 @@ def resize(target_image_path_str, max_length):
     shrinked_dir_path.mkdir(exist_ok=True, parents=True)
 
     save_paths = []
-    for image_path in image_dir_path.iterdir():
+    for image_path in target_paths:
         if image_path.suffix not in SHRINK_TARGET_EXTENSION:
             continue
         save_path = shrinked_dir_path / image_path.name
