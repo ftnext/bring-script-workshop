@@ -27,12 +27,47 @@ After: It will create the gui directory.
 └── target_images
 ```
 
-workaround
+### Workaround (if the `bringscript` command does not work well)
+
+Command line
 
 ```
 mkdir -p gui/web
 touch gui/gui.py
 touch gui/web/hello.html
+```
+
+gui/gui.py
+
+```python
+import eel
+
+
+@eel.expose()
+def spam():
+    pass
+
+
+if __name__ == "__main__":
+    eel.init("web")
+    eel.start("hello.html", size=(600, 400))
+```
+
+gui/web/hello.html
+
+```HTML
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
 ```
 
 ### 2. Change gui.py
@@ -53,31 +88,9 @@ from datetime import datetime  # Added
 @eel.expose
 def hello():
     return f"Hello World at {datetime.now()}"
-
-# if you starts from the empty file.
-if __name__ == "__main__":
-    eel.init("web")
-    eel.start("hello.html", size=(600, 400))
 ```
 
 ### 3. Change HTML in hello.html
-
-Workaround (if you start blank HTML)
-
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <script type="text/javascript" src="/eel.js"></script>
-    <script type="text/javascript">
-
-    </script>
-  </head>
-  <body>
-
-  </body>
-</html>
-```
 
 Before
 
