@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript">
+      function listUpImages(imagePaths) {
+        var imageHtml = `<p>No specified file or directory</p>`;
+        if (imagePaths) {
+          imageTags = imagePaths.map(path => `<img src=${path}>`);
+          imageHtml = imageTags.join('');
+        }
+        let imageDiv = document.getElementById("resized-image");
+        imageDiv.innerHTML = imageHtml;
+      }
+
+      function resize() {
+        let targetImagePath = document.getElementById("image-path-input").value;
+        let maxLengthStr = document.getElementById("max-length-input").value;
+        let maxLength = parseInt(maxLengthStr, 10);
+        eel.resize(targetImagePath, maxLength)(listUpImages);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <label for="image-path-input">Specify image file or directory path to be resized:</label>
+      <input id="image-path-input" placeholder="Type image path here" value="/Users/" size="60">
+    </div>
+    <div>
+      <label for="max-length-input">Specify max length:</label>
+      <input id="max-length-input" value="300">
+    </div>
+    <button type="button" onclick="resize()">Resize</button>
+    <div id="resized-image">---</div>
+  </body>
+</html>
