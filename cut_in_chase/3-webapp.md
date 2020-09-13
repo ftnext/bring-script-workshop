@@ -27,6 +27,45 @@ After: It will create the gui directory.
 └── target_images
 ```
 
+### Workaround (if the `bringscript` command does not work well)
+
+Command line
+
+```
+mkdir -p webapp/templates
+touch webapp/webapp.py
+touch webapp/templates/hello.html
+```
+
+webapp/webapp.py
+
+```python
+from flask import Flask, render_template
+
+
+app = Flask(__name__)
+
+
+@app.route("/hello")
+def hello():
+    return render_template("hello.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+webapp/templates/hello.html
+
+```HTML
+<!DOCTYPE html>
+<html>
+  <body>
+
+  </body>
+</html>
+```
+
 ### 2. Change webapp.py
 
 Before
