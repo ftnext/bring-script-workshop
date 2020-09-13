@@ -1,3 +1,4 @@
-# In this directory, place images or directories which includes images to be resized
+# Create `memories` directory, then place images or 
+# directories which includes images to be resized in the `memories` directory.
 *
 !.gitignore

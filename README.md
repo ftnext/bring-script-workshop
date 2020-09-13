@@ -1,6 +1,9 @@
 # bring-script-workshop
 Workshop at PyCon APAC 2020
 
+- Slide: https://bit.ly/bring-script-pyconapac
+- Repostiory: https://github.com/ftnext/bring-script-workshop
+
 ## Prerequisite
 
 - Python 3.7
@@ -26,7 +29,7 @@ pip install -r requirements.txt
 ```
 
 It will take some time...  
-I will introduce myself and this workshop using the Google slide.
+I will introduce myself and this workshop using the [slide](https://docs.google.com/presentation/d/1N5kNws1d1c3S00hBQjb9sPETovACgm0yRIzNPMR2Nmk/edit?usp=sharing).
 
 ### 3. Execute the image size redction script
 
@@ -50,7 +53,7 @@ Execute the script.
 
 ```
 cd first_step_script
-
+python shrink_image.py
 ```
 
 Check the `images/memories` directory (newly created).
