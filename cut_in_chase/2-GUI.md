@@ -62,6 +62,23 @@ if __name__ == "__main__":
 
 ### 3. Change HTML in hello.html
 
+Workaround (if you start blank HTML)
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript">
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
+```
+
 Before
 
 ```html
