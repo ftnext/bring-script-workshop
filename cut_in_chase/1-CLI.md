@@ -26,6 +26,12 @@ hello_world.py: error: the following arguments are required: name
 # Call example
 $ python hello_world.py PyConAPAC
 Hello, PyConAPAC
+
+# If you want to pass the string which includes whitespaces
+$ python hello_world.py 'PyCon APAC'
+$ python hello_world.py "PyCon APAC"
+# If you enclose in quotes, it will be a string containing whitespace and be passed as the `name` argument.
+# If you don't enclose, PyCon will be passed as the `name` argument and APAC is an extra argument that results in an error.
 ```
 
 ## Change shrink_image.py into CLI app
@@ -71,4 +77,4 @@ if __name__ == "__main__":
 
 ## Tips of argparse
 
-I will tell you some tips using the [slide](https://docs.google.com/presentation/d/1N5kNws1d1c3S00hBQjb9sPETovACgm0yRIzNPMR2Nmk/edit?usp=sharing).
+I will tell you some tips using the [slide](https://docs.google.com/presentation/d/1N5kNws1d1c3S00hBQjb9sPETovACgm0yRIzNPMR2Nmk/edit#slide=id.g8c1e6945b3_0_163).
