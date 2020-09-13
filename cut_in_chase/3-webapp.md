@@ -112,6 +112,10 @@ cd webapp
 python webapp.py 
 ```
 
+Open http:127.0.0.1:5000/hello in your browser.
+
+Press `Ctrl + C` to stop.
+
 ## Convert GUI to Web app
 
 Edit `webapp.py` and `templates/hello.html`.
@@ -185,3 +189,13 @@ After: HTML
     </form>
   </body>
 ```
+
+### Run the Web app
+
+```
+python webapp.py 
+```
+
+Open http:127.0.0.1:5000/resize in your browser.
+
+![Web app works!🙌](./images/web_app_works.png)

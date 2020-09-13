@@ -140,6 +140,8 @@ cd gui
 python gui.py 
 ```
 
+Press `Ctrl + C` to stop.
+
 ## Convert CLI to GUI
 
 Edit `gui.py` and `web/hello.html`.
@@ -233,3 +235,11 @@ After: JavaScript
       }
     </script>
 ```
+
+### Run the GUI app
+
+```
+python gui.py 
+```
+
+![GUI app works!🙌](./images/gui_app_works.png)
