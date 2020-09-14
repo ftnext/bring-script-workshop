@@ -2,7 +2,7 @@
 Pillow
 
 # for boilerplate codes of gui and web app
-git+https://github.com/ftnext/bring-script-more-users@master#subdirectory=bringscript&egg=bringscript
+git+https://github.com/ftnext/bring-script-more-users@bringscript0.1.0#subdirectory=bringscript&egg=bringscript
 
 # for GUI app
 Eel
